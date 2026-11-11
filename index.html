@@ -1,144 +1,89 @@
 <!doctype html>
 <html lang="hi">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#080d1d">
-<title>VoxIndia — News, Reimagined</title>
-<meta name="description" content="VoxIndia — भारत और दुनिया की खबरें, हिंदी और English में।">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>VoxIndia Store – Official App</title>
+<meta name="description" content="VoxIndia – Hindi and English news, breaking news, photo news and detailed reports.">
 <style>
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap');
-:root{--bg:#080d1d;--panel:#101a33;--panel2:#14213e;--text:#f5f7ff;--muted:#aab6d1;--cyan:#6ee7f9;--blue:#6588ff;--purple:#a68bff;--line:rgba(190,210,255,.13);--shadow:0 28px 70px rgba(0,0,0,.42)}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse at 75% 5%,rgba(65,91,190,.22),transparent 32%),radial-gradient(ellipse at 5% 35%,rgba(30,190,208,.10),transparent 28%),var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;overflow-x:hidden}
-a{color:inherit;text-decoration:none}button{font:inherit}.wrap{width:min(1160px,calc(100% - 40px));margin:auto}
-.nav{height:82px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);position:relative;z-index:5}
-.brand{display:flex;align-items:center;gap:12px;font:800 22px Manrope,sans-serif;letter-spacing:-.8px}.brand-mark{width:43px;height:43px;border-radius:14px;display:grid;place-items:center;background:linear-gradient(145deg,#8df3ff,#5275ff 58%,#8c68f4);box-shadow:0 9px 28px #567eff55,inset 0 1px 1px #ffffffa8;color:#071126;font-weight:900;font-size:22px;transform:rotate(-5deg)}
-.navright{display:flex;align-items:center;gap:15px}.lang{border:1px solid var(--line);background:#121d36;color:white;border-radius:12px;padding:10px 13px;outline:none}
-.hero{min-height:610px;display:grid;grid-template-columns:1.03fr .97fr;align-items:center;gap:30px;padding:68px 0 55px;position:relative}
-.eyebrow{display:inline-flex;align-items:center;gap:9px;padding:8px 13px;border:1px solid #6ee7f944;border-radius:99px;background:#6ee7f90d;color:#a6f5ff;font-size:12px;font-weight:800;letter-spacing:1.3px;text-transform:uppercase}
-.dot{width:7px;height:7px;border-radius:50%;background:#63e8bd;box-shadow:0 0 12px #63e8bd}
-h1{font:800 clamp(44px,6vw,76px)/1.03 Manrope,sans-serif;letter-spacing:-3.8px;margin:23px 0 20px;max-width:650px}
-.gradient{background:linear-gradient(95deg,#fff 5%,#8deeff 45%,#9d8bff 95%);-webkit-background-clip:text;background-clip:text;color:transparent}
-.lead{font-size:17px;line-height:1.8;color:var(--muted);max-width:540px}
-.actions{display:flex;flex-wrap:wrap;gap:13px;margin-top:30px}.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:15px 22px;border-radius:14px;font-weight:800;transition:.25s;cursor:pointer;border:1px solid transparent}
-.btn-primary{color:#061126;background:linear-gradient(110deg,#8df3ff,#7f9aff 65%,#b09aff);box-shadow:0 12px 30px #6688ff44,inset 0 1px 1px #fff}.btn-primary:hover{transform:translateY(-4px);box-shadow:0 18px 40px #6688ff66}
-.btn-ghost{border-color:var(--line);background:#ffffff08;color:#edf3ff}.btn-ghost:hover{background:#ffffff12;transform:translateY(-3px)}
-.trust{display:flex;gap:22px;flex-wrap:wrap;margin-top:28px;color:#8999bb;font-size:12px}.trust span{display:flex;align-items:center;gap:7px}.check{color:#70e6c2;font-weight:900}
-.visual{height:470px;position:relative;display:grid;place-items:center;perspective:1000px}
-.orbit{position:absolute;width:390px;height:390px;border:1px solid #83dfff25;border-radius:50%;transform:rotateX(68deg) rotateZ(-22deg);box-shadow:0 0 55px #5d7eff12,inset 0 0 45px #5d7eff0a}
-.orbit:before,.orbit:after{content:"";position:absolute;border:1px solid #a58dff30;border-radius:50%;inset:35px}.orbit:after{inset:75px;border-color:#71e8f82b}
-.phone{position:relative;width:245px;height:430px;border-radius:36px;padding:10px;background:linear-gradient(145deg,#d4e8ff,#4b5c91 24%,#10182f 58%,#9ba9d1);box-shadow:25px 35px 70px #0009,0 0 55px #638aff40,inset 0 1px 2px white;transform:rotateY(-17deg) rotateX(7deg) rotateZ(5deg);animation:float 6s ease-in-out infinite}
-.phone-screen{height:100%;border-radius:28px;overflow:hidden;background:linear-gradient(180deg,#111d3c,#090f20);padding:17px 14px;position:relative}
-.phone-top{display:flex;justify-content:space-between;align-items:center;font-size:10px;color:#b6c5e7}.mini-brand{font-size:14px;font-weight:900;color:#fff}
-.breaking{margin-top:22px;border-radius:12px;padding:12px;background:linear-gradient(110deg,#ed5265,#ff895f);font-size:10px;font-weight:900;letter-spacing:1px}
-.fake-photo{height:145px;border-radius:15px;margin-top:12px;background:linear-gradient(135deg,#ffbb78,#e96b75 45%,#3e4e9c);position:relative;overflow:hidden}
-.fake-photo:before{content:"";position:absolute;width:180px;height:180px;border-radius:50%;background:#ffdca766;top:-65px;right:-35px;filter:blur(3px)}
-.fake-photo:after{content:"";position:absolute;left:-20px;right:-20px;bottom:-50px;height:130px;background:linear-gradient(135deg,#1c315b,#10172c);clip-path:polygon(0 55%,25% 10%,45% 45%,68% 0,100% 50%,100% 100%,0 100%)}
-.fake-lines{height:8px;border-radius:10px;background:#dce8ff28;margin-top:12px}.fake-lines.short{width:65%}.fake-tag{display:inline-block;margin-top:12px;padding:5px 8px;border-radius:6px;background:#6b83ff2b;color:#a9bcff;font-size:8px}
-.float-card{position:absolute;padding:13px 16px;border-radius:16px;background:linear-gradient(145deg,#1d2b4b,#111b34);border:1px solid #b8d1ff2a;box-shadow:var(--shadow);backdrop-filter:blur(15px);font-size:12px;color:#eaf2ff}
-.float-card b{display:block;font-size:14px;margin-bottom:3px}.fc1{top:68px;left:0;transform:rotate(-7deg)}.fc2{right:-2px;bottom:75px;transform:rotate(6deg)}.fc3{right:8px;top:85px;transform:rotate(7deg);padding:10px 13px;color:#9ff5e0}
-.section{padding:55px 0}.section-head{text-align:center;margin-bottom:28px}.kicker{color:var(--cyan);font-size:11px;font-weight:800;letter-spacing:2px;text-transform:uppercase}.section h2{font:800 clamp(28px,4vw,42px) Manrope,sans-serif;letter-spacing:-1.5px;margin:9px 0}.section-head p{color:var(--muted);margin:0}
-.features{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.feature{padding:23px;border:1px solid var(--line);border-radius:19px;background:linear-gradient(145deg,#152342b8,#0e1830b8);box-shadow:0 12px 35px #0002;transition:.25s}.feature:hover{transform:translateY(-6px);border-color:#7ce8ff55;box-shadow:0 20px 45px #0004}.iconbox{width:47px;height:47px;display:grid;place-items:center;border-radius:14px;background:linear-gradient(145deg,#7eeeff25,#8b78ff28);border:1px solid #9befff25;font-size:22px;margin-bottom:16px}.feature h3{margin:0 0 7px;font-size:17px}.feature p{color:var(--muted);font-size:13px;line-height:1.7;margin:0}
-.download{margin:45px 0 70px;padding:42px;border:1px solid #a4caff2a;border-radius:25px;text-align:center;background:radial-gradient(ellipse at 50% 0%,#6a85ff30,transparent 55%),linear-gradient(145deg,#172747,#0e1830);box-shadow:var(--shadow);position:relative;overflow:hidden}
-.download:before{content:"";position:absolute;width:260px;height:260px;border-radius:50%;border:1px solid #9eefff18;top:-170px;left:calc(50% - 130px);box-shadow:0 0 0 25px #9eefff08,0 0 0 55px #9eefff05}
-.download h2{font:800 clamp(27px,4vw,40px) Manrope;margin:0 0 8px;letter-spacing:-1px}.download p{color:var(--muted);margin:0 0 15px}
-.version{font-size:12px;color:#9eafd0;margin:10px 0}.status{margin:15px auto 0;max-width:560px;padding:11px 14px;border:1px solid #e3bd6d30;border-radius:11px;color:#f4d69a;background:#e3bd6d0c;font-size:13px}
-footer{border-top:1px solid var(--line);padding:25px 0 35px;color:#8392b2;font-size:12px}.foot{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}.foot a{color:#b7c8ed}
-@keyframes float{0%,100%{transform:translateY(0) rotateY(-17deg) rotateX(7deg) rotateZ(5deg)}50%{transform:translateY(-13px) rotateY(-13deg) rotateX(9deg) rotateZ(3deg)}}
-@media(max-width:800px){.hero{grid-template-columns:1fr;padding-top:48px}.visual{height:420px}.features{grid-template-columns:repeat(2,1fr)}h1{letter-spacing:-2.5px}.fc1{left:3%}.fc2{right:2%}}
-@media(max-width:520px){.wrap{width:min(100% - 28px,1160px)}.nav{height:70px}.brand{font-size:18px}.brand-mark{width:38px;height:38px}.hero{padding:42px 0 20px;gap:8px}h1{font-size:46px}.lead{font-size:15px}.visual{height:390px;transform:scale(.88);margin:-10px -20px}.phone{width:225px;height:400px}.orbit{width:340px;height:340px}.fc1{top:45px}.fc2{bottom:45px}.fc3{top:55px;right:0}.features{grid-template-columns:1fr}.section{padding:40px 0}.download{padding:30px 18px;margin:30px 0 48px}.trust{gap:12px}}
-</style>
-</head>
+:root{--navy:#101b39;--blue:#315de8;--ink:#17213a;--muted:#64708a;--bg:#f3f6fc}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 Arial,sans-serif}
+header{background:var(--navy);color:white;padding:16px 5%;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.brand{font-size:23px;font-weight:800;letter-spacing:.2px}.lang{border:1px solid #7180a7;background:#1b2a50;color:white;border-radius:9px;padding:9px 12px}
+main{max-width:980px;margin:28px auto;padding:0 16px}.hero,.panel{background:white;border:1px solid #e1e7f2;border-radius:20px;padding:28px;margin-bottom:18px;box-shadow:0 8px 28px #15264b0b}
+.hero{text-align:center;padding:44px 24px}.logo{width:82px;height:82px;border-radius:22px;background:#eaf0ff;color:var(--blue);display:grid;place-items:center;font-size:32px;font-weight:900;margin:0 auto 12px}
+h1{font-size:clamp(28px,5vw,42px);line-height:1.15;margin:8px 0}h2{margin:0 0 12px;font-size:23px}p{color:var(--muted);margin:8px 0}
+.btn{display:inline-block;background:var(--blue);color:white;text-decoration:none;border:0;border-radius:12px;padding:13px 22px;font-weight:700;margin:10px 5px;cursor:pointer}
+.btn.secondary{background:#eaf0ff;color:#2449c8}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:12px}.feature{background:#f7f9fe;border-radius:14px;padding:17px}.feature b{display:block;margin-bottom:5px}
+.status{padding:13px;border-radius:12px;background:#fff4df;color:#87500d;margin-top:14px}.hide{display:none}
+footer{text-align:center;padding:24px;color:var(--muted)}footer a{color:var(--blue);margin:0 8px}
+</style></head>
 <body>
-<header class="wrap nav">
- <a class="brand" href="#"><span class="brand-mark">V</span><span>VoxIndia<span style="color:var(--cyan)">.</span></span></a>
- <div class="navright"><select id="lang" class="lang" aria-label="Choose language"><option value="hi">हिंदी</option><option value="en">English</option></select></div>
-</header>
-<main class="wrap">
+<header><div class="brand">VoxIndia Store</div><select class="lang" id="lang" aria-label="Language"><option value="hi">हिंदी</option><option value="en">English</option></select></header>
+<main>
 <section class="hero">
- <div>
-  <div class="eyebrow"><span class="dot"></span><span id="eyebrow">YOUR NEWS. YOUR INDIA.</span></div>
-  <h1 id="headline">हर खबर का<br><span class="gradient">नया नज़रिया।</span></h1>
-  <p class="lead" id="intro">भारत और दुनिया की ताज़ा खबरें अब एक शानदार अनुभव में। ब्रेकिंग न्यूज़ से लेकर गहराई वाली रिपोर्ट तक — सब कुछ हिंदी और English में।</p>
-  <div class="actions"><a class="btn btn-primary" id="heroDownload" href="#download">↓ <span id="downloadLabel">ऐप डाउनलोड करें</span></a><a class="btn btn-ghost" href="#features"><span id="exploreLabel">खासियतें देखें</span> ↗</a></div>
-  <div class="trust"><span><i class="check">✓</i><span id="trust1">हिंदी और English</span></span><span><i class="check">✓</i><span id="trust2">तेज़ और आसान</span></span><span><i class="check">✓</i><span id="trust3">मुफ़्त डाउनलोड</span></span></div>
- </div>
- <div class="visual" aria-label="VoxIndia app preview">
-  <div class="orbit"></div>
-  <div class="phone"><div class="phone-screen">
-   <div class="phone-top"><span>9:41</span><span class="mini-brand">VoxIndia</span><span>●●●</span></div>
-   <div class="breaking">● BREAKING NEWS</div><div class="fake-photo"></div>
-   <div class="fake-tag">TOP STORY · INDIA</div><div class="fake-lines"></div><div class="fake-lines short"></div>
-   <div style="display:flex;gap:8px;margin-top:18px"><div style="height:66px;flex:1;border-radius:10px;background:linear-gradient(135deg,#273c67,#17233e)"></div><div style="height:66px;flex:1;border-radius:10px;background:linear-gradient(135deg,#5c4b87,#222c52)"></div></div>
-   <div class="fake-lines"></div><div class="fake-lines short"></div>
-  </div></div>
-  <div class="float-card fc1"><b>⚡ Breaking News</b><span>सबसे ज़रूरी खबरें</span></div>
-  <div class="float-card fc2"><b>▶ Video + Reels</b><span>खबरें देखने का नया अंदाज़</span></div>
-  <div class="float-card fc3">● LIVE UPDATES</div>
- </div>
+<div class="logo">V</div>
+<h1 id="heading">VoxIndia</h1>
+<p id="tagline">खबरें सबसे पहले, आपकी अपनी भाषा में।</p>
+<a class="btn" id="topDownload" href="#" target="_blank" rel="noopener">ऐप डाउनलोड करें</a>
+<div id="loadStatus" class="status">ऐप की जानकारी लोड हो रही है…</div>
 </section>
-<section class="section" id="features">
- <div class="section-head"><div class="kicker" id="featureKicker">MADE FOR THE WAY YOU READ</div><h2 id="featureTitle">खबरें, आपके अंदाज़ में।</h2><p id="featureSub">एक ही जगह पर हर तरह की खबर और जानकारी।</p></div>
- <div class="features" id="featureGrid">
-  <article class="feature"><div class="iconbox">▤</div><h3 id="f1t">न्यूज़ रील्स</h3><p id="f1p">स्क्रॉल करें और छोटे वीडियो व खबरों से अपडेट रहें।</p></article>
-  <article class="feature"><div class="iconbox">⚡</div><h3 id="f2t">ब्रेकिंग न्यूज़</h3><p id="f2p">महत्वपूर्ण खबरें और बड़े अपडेट सबसे पहले देखें।</p></article>
-  <article class="feature"><div class="iconbox">▧</div><h3 id="f3t">फोटो न्यूज़</h3><p id="f3p">तस्वीरों के साथ घटनाओं को करीब से जानें।</p></article>
-  <article class="feature"><div class="iconbox">▤</div><h3 id="f4t">विस्तृत रिपोर्ट</h3><p id="f4p">ज़रूरी खबरों की पूरी जानकारी और संदर्भ पढ़ें।</p></article>
-  <article class="feature"><div class="iconbox">▶</div><h3 id="f5t">YouTube वीडियो</h3><p id="f5p">खबरों से जुड़े वीडियो एक ही जगह देखें।</p></article>
-  <article class="feature"><div class="iconbox">◎</div><h3 id="f6t">अपनी भाषा, अपने विषय</h3><p id="f6p">हिंदी या English चुनें और पसंदीदा विषयों से जुड़े रहें।</p></article>
- </div>
-</section>
-<section class="download" id="download">
- <div class="kicker" id="downloadKicker">GET THE APP</div><h2 id="downloadTitle">VoxIndia आपके साथ।</h2><p id="downloadText">आज ही डाउनलोड करें और खबरों से जुड़े रहें।</p>
- <div class="version" id="version"></div>
- <a class="btn btn-primary" id="mainDownload" href="#" target="_blank" rel="noopener">↓ <span id="bottomLabel">Download VoxIndia</span></a>
- <div class="status" id="status">ऐप की नवीनतम जानकारी लोड हो रही है…</div>
-</section>
+<section class="panel"><h2 id="aboutTitle">VoxIndia के बारे में</h2><p id="description">VoxIndia की जानकारी यहाँ दिखाई देगी।</p></section>
+<section class="panel"><h2 id="featuresTitle">ऐप की खास सुविधाएँ</h2><div class="grid" id="features">
+<div class="feature"><b>न्यूज़ रील्स</b><span>आसान तरीके से खबरें पढ़ें और देखें।</span></div>
+<div class="feature"><b>ब्रेकिंग न्यूज़</b><span>महत्वपूर्ण खबरों से अपडेट रहें।</span></div>
+<div class="feature"><b>फोटो न्यूज़</b><span>तस्वीरों के साथ खबरें।</span></div>
+<div class="feature"><b>विस्तृत रिपोर्ट</b><span>खबरों की पूरी जानकारी।</span></div>
+<div class="feature"><b>YouTube वीडियो</b><span>वीडियो के जरिए समाचार।</span></div>
+<div class="feature"><b>हिंदी और English</b><span>अपनी पसंद की भाषा चुनें।</span></div>
+</div></section>
+<section class="panel" style="text-align:center"><h2 id="downloadTitle">VoxIndia डाउनलोड करें</h2><p id="version">नवीनतम संस्करण उपलब्ध होने पर यहाँ दिखेगा।</p><a class="btn" id="bottomDownload" href="#" target="_blank" rel="noopener">ऐप डाउनलोड करें</a></section>
 </main>
-<footer><div class="wrap foot"><span>© <span id="year"></span> VoxIndia. All rights reserved.</span><span><a href="privacy-policy.html">Privacy Policy</a> &nbsp;·&nbsp; <a href="mailto:official.voxindia@gmail.com">Contact</a></span></div></footer>
+<footer><a href="privacy-policy.html">Privacy Policy</a> · <a href="mailto:official.voxindia@gmail.com">Contact</a><p>© VoxIndia Store</p></footer>
 <script type="module">
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
 import { getFirestore, doc, getDoc } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
 const firebaseConfig = {
- apiKey: "AIzaSyDiS3QVqsYlBpX7_HBUs01UR0BuFfOlCuA",
- authDomain: "voxindia-store-a9b58.firebaseapp.com",
- projectId: "voxindia-store-a9b58",
- storageBucket: "voxindia-store-a9b58.firebasestorage.app",
- messagingSenderId: "986877887799",
- appId: "1:986877887799:web:b3befa2adf8a78d47746b2",
- measurementId: "G-MS2GGLG15F"
+  apiKey: "AIzaSyDiS3QVqsYlBpX7_HBUs01UR0BuFfOlCuA",
+  authDomain: "voxindia-store-a9b58.firebaseapp.com",
+  projectId: "voxindia-store-a9b58",
+  storageBucket: "voxindia-store-a9b58.firebasestorage.app",
+  messagingSenderId: "986877887799",
+  appId: "1:986877887799:web:b3befa2adf8a78d47746b2",
+  measurementId: "G-MS2GGLG15F"
 };
-const db=getFirestore(initializeApp(firebaseConfig));
+const app=initializeApp(firebaseConfig), db=getFirestore(app);
+// Public GitHub Release URL: APK must be uploaded with this exact filename.
+const APK_DOWNLOAD_URL="https://github.com/officialvoxindia-lang/VoxIndia-APK-Releases/releases/latest/download/VoxIndia.apk";
 const $=id=>document.getElementById(id);
-$("year").textContent=new Date().getFullYear();
-const copy={
-hi:{eyebrow:"आपकी खबरें। आपका भारत।",headline:'हर खबर का<br><span class="gradient">नया नज़रिया।</span>',intro:"भारत और दुनिया की ताज़ा खबरें अब एक शानदार अनुभव में। ब्रेकिंग न्यूज़ से लेकर गहराई वाली रिपोर्ट तक — सब कुछ हिंदी और English में।",download:"ऐप डाउनलोड करें",explore:"खासियतें देखें",trust:["हिंदी और English","तेज़ और आसान","मुफ़्त डाउनलोड"],featureKicker:"आपके खबर पढ़ने के अंदाज़ के लिए",featureTitle:"खबरें, आपके अंदाज़ में।",featureSub:"एक ही जगह पर हर तरह की खबर और जानकारी।",features:[["न्यूज़ रील्स","स्क्रॉल करें और छोटे वीडियो व खबरों से अपडेट रहें।"],["ब्रेकिंग न्यूज़","महत्वपूर्ण खबरें और बड़े अपडेट सबसे पहले देखें।"],["फोटो न्यूज़","तस्वीरों के साथ घटनाओं को करीब से जानें।"],["विस्तृत रिपोर्ट","ज़रूरी खबरों की पूरी जानकारी और संदर्भ पढ़ें।"],["YouTube वीडियो","खबरों से जुड़े वीडियो एक ही जगह देखें।"],["अपनी भाषा, अपने विषय","हिंदी या English चुनें और पसंदीदा विषयों से जुड़े रहें।"]],downloadTitle:"VoxIndia आपके साथ।",downloadText:"आज ही डाउनलोड करें और खबरों से जुड़े रहें।",downloadKicker:"ऐप प्राप्त करें",bottom:"VoxIndia डाउनलोड करें",loading:"ऐप की नवीनतम जानकारी लोड हो रही है…",missing:"अभी APK उपलब्ध नहीं है। Admin Panel से ऐप प्रकाशित होने के बाद डाउनलोड लिंक यहाँ दिखाई देगा।",failed:"जानकारी लोड नहीं हो सकी। कृपया बाद में फिर कोशिश करें।"},
-en:{eyebrow:"YOUR NEWS. YOUR INDIA.",headline:'Every story.<br><span class="gradient">A new perspective.</span>',intro:"The latest news from India and around the world, in one beautiful experience. From breaking updates to in-depth reports — in Hindi and English.",download:"Download the App",explore:"Explore Features",trust:["Hindi & English","Fast and simple","Free download"],featureKicker:"MADE FOR THE WAY YOU READ",featureTitle:"News, your way.",featureSub:"Every kind of story and update, all in one place.",features:[["News Reels","Scroll through short videos and quick news updates."],["Breaking News","Catch important headlines and major updates first."],["Photo News","See the stories unfold through photographs."],["Detailed Reports","Read the full context behind important stories."],["YouTube Videos","Watch news-related videos in one place."],["Your Language, Your Topics","Choose Hindi or English and follow the topics you care about."]],downloadTitle:"VoxIndia goes with you.",downloadText:"Get the app today and stay connected to the stories that matter.",downloadKicker:"GET THE APP",bottom:"Download VoxIndia",loading:"Loading the latest app information…",missing:"The APK is not available yet. The download link will appear here after the app is published from the Admin Panel.",failed:"Could not load app information. Please try again later."}
+let appData=null;
+const translations={
+ hi:{tag:"खबरें सबसे पहले, आपकी अपनी भाषा में।",about:"VoxIndia के बारे में",features:"ऐप की खास सुविधाएँ",download:"VoxIndia डाउनलोड करें",button:"ऐप डाउनलोड करें",loading:"ऐप की जानकारी लोड हो रही है…",missing:"अभी ऐप डाउनलोड के लिए उपलब्ध नहीं है। कृपया बाद में फिर देखें।",failed:"ऐप की जानकारी लोड नहीं हो सकी। कृपया थोड़ी देर बाद प्रयास करें।"},
+ en:{tag:"News first, in your language.",about:"About VoxIndia",features:"App Features",download:"Download VoxIndia",button:"Download App",loading:"Loading app information…",missing:"The app is not available for download yet. Please check again later.",failed:"Could not load app information. Please try again later."}
 };
-let data=null;
 function render(){
- const lang=$("lang").value,t=copy[lang];document.documentElement.lang=lang;
- $("eyebrow").textContent=t.eyebrow;$("headline").innerHTML=t.headline;$("intro").textContent=t.intro;
- $("downloadLabel").textContent=t.download;$("exploreLabel").textContent=t.explore;
- ["trust1","trust2","trust3"].forEach((id,i)=>$(id).textContent=t.trust[i]);
- $("featureKicker").textContent=t.featureKicker;$("featureTitle").textContent=t.featureTitle;$("featureSub").textContent=t.featureSub;
- t.features.forEach((f,i)=>{$("f"+(i+1)+"t").textContent=f[0];$("f"+(i+1)+"p").textContent=f[1];});
- $("downloadTitle").textContent=t.downloadTitle;$("downloadText").textContent=t.downloadText;$("downloadKicker").textContent=t.downloadKicker;$("bottomLabel").textContent=t.bottom;
- if(data){$("version").textContent=(lang==="hi"?"नवीनतम संस्करण: ":"Latest version: ")+(data.version||"");}
- if(!data)$("status").textContent=t.loading;
+ const lang=$("lang").value,t=translations[lang]; document.documentElement.lang=lang;
+ $("tagline").textContent=t.tag;$("aboutTitle").textContent=t.about;$("featuresTitle").textContent=t.features;$("downloadTitle").textContent=t.download;
+ $("topDownload").textContent=t.button;$("bottomDownload").textContent=t.button;
+ if(appData){
+  $("heading").textContent=(lang==="hi"?appData.nameHindi:appData.nameEnglish)||"VoxIndia";
+  $("description").textContent=(lang==="hi"?appData.descriptionHindi:appData.descriptionEnglish)||"";
+  $("version").textContent=(lang==="hi"?"संस्करण ":"Version ")+(appData.version||"");
+  const url=APK_DOWNLOAD_URL||appData.apkUrl||"";
+  for(const id of ["topDownload","bottomDownload"]){$(id).href=url;$(id).classList.toggle("hide",!url);}
+  $("loadStatus").textContent=url?"":t.missing;$("loadStatus").classList.toggle("hide",!!url);
+ }else{
+  $("heading").textContent="VoxIndia";
+  for(const id of ["topDownload","bottomDownload"]){$(id).href=APK_DOWNLOAD_URL;$(id).classList.toggle("hide",!APK_DOWNLOAD_URL);}
+  $("loadStatus").textContent=APK_DOWNLOAD_URL?"APK डाउनलोड लिंक तैयार है।":"";
+  $("loadStatus").classList.toggle("hide",!!APK_DOWNLOAD_URL);
+ }
 }
 $("lang").value=localStorage.getItem("voxindia-store-lang")||"hi";
 $("lang").addEventListener("change",()=>{localStorage.setItem("voxindia-store-lang",$("lang").value);render();});
-render();
 try{
  const snap=await getDoc(doc(db,"apps","voxindia"));
- if(snap.exists()&&snap.data().published===true){
-  data=snap.data();const url=data.apkUrl||"";
-  if(url){$("mainDownload").href=url;$("heroDownload").href=url;$("status").style.display="none";}
-  else $("status").textContent=copy[$("lang").value].missing;
-  if(data.nameHindi||data.nameEnglish)document.title=(data.nameEnglish||data.nameHindi)+" — VoxIndia";
-  render();
- }else $("status").textContent=copy[$("lang").value].missing;
-}catch(err){console.error(err);$("status").textContent=copy[$("lang").value].failed;}
-</script>
-</body></html>
+ if(snap.exists()&&snap.data().published===true) appData=snap.data();
+ else {$("loadStatus").textContent=translations[$("lang").value].missing;}
+ render();
+}catch(e){console.error(e);$("loadStatus").textContent=translations[$("lang").value].failed;}
+</script></body></html>
